@@ -34,7 +34,7 @@ header {
     padding: 2rem 3rem;
 }
 
-head div a {
+header div a {
     text-decoration: none;
     font-size: 2.2rem;
     font-weight: bold;
