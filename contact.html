@@ -28,18 +28,98 @@
   <main>
     <h1>contactez-nous</h1>
   </main>
-  <footer>
-    <div>
-      <p>&copy; 2026 Olga. Tous droits réservés.</p>
-      <div>
-        <a href=""><i class="fa-brands fa-github"></i></a>
-        <a href=""><i class="fa-brands fa-linkedin"></i></a>
-        <a href=""><i class="fa-brands fa-X-twitter"></i></a>
-        <a href="https://github.com/24km145si">Github</a>
-        <a href="#">fa-linkedin</a>
-        <a href="#">X</a>
-      </div>
+  
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact - Mon Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+      </style>
+</head>
+
+<body>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact - Mon Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        
+    </style>
+</head>
+
+<body>
+<main class="contact-section">
+    <h1>Contactez-nous</h1>
+
+    <div class="contact-container">
+
+        <!-- Infos -->
+        <div class="contact-info">
+            <h2>Mes informations</h2>
+            <p><i class="fa fa-phone"></i> 0979008970</p>
+            <p><i class="fa fa-whatsapp"></i> WhatsApp disponible</p>
+            <p><i class="fa fa-map-marker-alt"></i> Lubumbashi</p>
+
+            <a href="https://wa.me/243979008970" target="_blank" class="whatsapp-btn">
+                Discuter sur WhatsApp
+            </a>
+        </div>
+
+        <!-- Formulaire -->
+        <div class="contact-form">
+            <h2>Envoyer un message</h2>
+            <form id="contactForm">
+                
+                <div class="form-group">
+                    <label>Nom</label>
+                    <input type="text" id="nom" value="Olga KAZADI" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Téléphone</label>
+                    <input type="tel" id="telephone" placeholder="Entrez votre numéro" required>
+                </div>
+
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+
     </div>
-    </footer>
+</main>
+
+<footer>
+    <p>&copy; 2026 Olga KAZADI</p>
+</footer>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let nom = document.getElementById("nom").value;
+    let tel = document.getElementById("telephone").value;
+
+    let message = `Bonjour, je suis ${nom}. Mon numéro est ${tel}.`;
+
+    let whatsappURL = "https://wa.me/243979008970?text=" + encodeURIComponent(message);
+
+    window.open(whatsappURL, "_blank");
+});
+</script>
+
 </body>
 </html>
