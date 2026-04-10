@@ -1,125 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mon portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/react-is/19.1.1/cjs/react-is.production.min.js">
-</head>
-<body>
-  <header>
+    <title>Contact - Mon Portfolio</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<div>
-    <a href="">mon portfolio</a>
-</div>
-<nav>
-   <ul>
-    <li><a href="index.html">Accueil</a></li>
-    <li><a href="projets.html">Projets</a></li>
-    <li><a href="passions.html">Passions</a></li>
-    <li><a href="divertissement.html">Divertissement</a></li>
-    <li><a href="contact.html"class="active">contact</a></li>
-   </ul> 
-</nav>
-  </header> 
-  <main>
-    <h1>contactez-nous</h1>
-  </main>
-  
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Contact - Mon Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Font Awesome -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <style>
-      </style>
+    
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Contact - Mon Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <header>
+        <div class="logo">
+            <a href="index.html">mon portfolio</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="passions.html">Passions</a></li>
+                <li><a href="divertissement.html">Divertissement</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul> 
+        </nav>
+    </header> 
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <style>
+    <main class="contact-section">
+        <h1>Contactez-nous</h1>
         
-    </style>
-</head>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Mes informations</h2>
+                <p><i class="fas fa-phone"></i> 0979008970</p>
+                <p><i class="fab fa-whatsapp"></i> WhatsApp disponible</p>
+                <p><i class="fas fa-map-marker-alt"></i> Lubumbashi</p>
+                <a href="https://wa.me/243979008970" target="_blank" class="whatsapp-btn">
+                    Discuter sur WhatsApp
+                </a>
+            </div>
 
-<body>
-<main class="contact-section">
-    <h1>Contactez-nous</h1>
-
-    <div class="contact-container">
-
-        <!-- Infos -->
-        <div class="contact-info">
-            <h2>Mes informations</h2>
-            <p><i class="fa fa-phone"></i> 0979008970</p>
-            <p><i class="fa fa-whatsapp"></i> WhatsApp disponible</p>
-            <p><i class="fa fa-map-marker-alt"></i> Lubumbashi</p>
-
-            <a href="https://wa.me/243979008970" target="_blank" class="whatsapp-btn">
-                Discuter sur WhatsApp
-            </a>
+            <div class="contact-form">
+                <h2>Envoyer un message</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="nom">Nom</label>
+                        <input type="text" id="nom" placeholder="Votre nom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telephone">Téléphone</label>
+                        <input type="tel" id="telephone" placeholder="Entrez votre numéro" required>
+                    </div>
+                    <button type="submit">Envoyer via WhatsApp</button>
+                </form>
+            </div>
         </div>
+    </main>
 
-        <!-- Formulaire -->
-        <div class="contact-form">
-            <h2>Envoyer un message</h2>
-            <form id="contactForm">
-                
-                <div class="form-group">
-                    <label>Nom</label>
-                    <input type="text" id="nom" value="Olga KAZADI" required>
-                </div>
+    <footer>
+        <p>&copy; 2026 Olga KAZADI</p>
+    </footer>
 
-                <div class="form-group">
-                    <label>Téléphone</label>
-                    <input type="tel" id="telephone" placeholder="Entrez votre numéro" required>
-                </div>
+    <script>
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+        
+        const nom = document.getElementById("nom").value;
+        const tel = document.getElementById("telephone").value;
+        const numeroWhatsApp = "243979008970";
 
-                <button type="submit">Envoyer</button>
-            </form>
-        </div>
+        // Construction du message
+        const message = `Bonjour, je suis ${nom}. Mon numéro est ${tel}.`;
 
-    </div>
-</main>
-
-<footer>
-    <p>&copy; 2026 Olga KAZADI</p>
-</footer>
-
-<script>
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    let nom = document.getElementById("nom").value;
-    let tel = document.getElementById("telephone").value;
-
-    let message = `Bonjour, je suis ${nom}. Mon numéro est ${tel}.`;
-
-    let whatsappURL = "https://wa.me/243979008970?text=" + encodeURIComponent(message);
-
-    window.open(whatsappURL, "_blank");
-});
-</script>
+        // Encodage et ouverture du lien
+        const whatsappURL = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(message)}`;
+        window.open(whatsappURL, "_blank");
+    });
+    </script>
 
 </body>
 </html>
