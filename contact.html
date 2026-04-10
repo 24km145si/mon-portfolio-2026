@@ -27,59 +27,61 @@
                 <li><a href="contact.html" class="active">Contact</a></li>
             </ul> 
         </nav>
-    </header> 
-
+    </header>
     <main class="contact-section">
         <h1>Contactez-nous</h1>
-        
-        <div class="contact-container">
+    <div class="contact-container">
             <div class="contact-info">
                 <h2>Mes informations</h2>
-                <p><i class="fas fa-phone"></i> 0979008970</p>
-                <p><i class="fab fa-whatsapp"></i> WhatsApp disponible</p>
-                <p><i class="fas fa-map-marker-alt"></i> Lubumbashi</p>
-                <a href="https://wa.me/243979008970" target="_blank" class="whatsapp-btn">
-                    Discuter sur WhatsApp
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <span>0979008970</span>
+                </div>
+                <div class="info-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp disponible</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Lubumbashi</span>
+                </div>
+                <a href="https://wa.me/243979008970" target="_blank" class="whatsapp-link">
+                    <i class="fab fa-whatsapp"></i> Discuter en direct
                 </a>
             </div>
-
-            <div class="contact-form">
+        <div class="contact-form">
                 <h2>Envoyer un message</h2>
                 <form id="contactForm">
                     <div class="form-group">
-                        <label for="nom">Nom</label>
-                        <input type="text" id="nom" placeholder="Votre nom" required>
+                        <label for="nom">Nom complet</label>
+                        <input type="text" id="nom" placeholder="Ex: Melga kazadi" required>
                     </div>
                     <div class="form-group">
-                        <label for="telephone">Téléphone</label>
-                        <input type="tel" id="telephone" placeholder="Entrez votre numéro" required>
+                        <label for="telephone">Numéro de téléphone</label>
+                        <input type="tel" id="telephone" placeholder=" 0907577670 " required>
                     </div>
-                    <button type="submit">Envoyer via WhatsApp</button>
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Envoyer via WhatsApp
+                    </button>
                 </form>
             </div>
         </div>
     </main>
-
-    <footer>
-        <p>&copy; 2026 Olga KAZADI</p>
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Olga KAZADI. Tous droits réservés.</p>
+            <div class="social-icons">
+                <a href="https://github.com/24km145si" target="_blank" title="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="#" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="#" title="X (Twitter)">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+            </div>
+        </div>
     </footer>
-
-    <script>
-    document.getElementById("contactForm").addEventListener("submit", function(e) {
-        e.preventDefault();
-        
-        const nom = document.getElementById("nom").value;
-        const tel = document.getElementById("telephone").value;
-        const numeroWhatsApp = "243979008970";
-
-        // Construction du message
-        const message = `Bonjour, je suis ${nom}. Mon numéro est ${tel}.`;
-
-        // Encodage et ouverture du lien
-        const whatsappURL = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(message)}`;
-        window.open(whatsappURL, "_blank");
-    });
-    </script>
-
-</body>
+ </body>
 </html>

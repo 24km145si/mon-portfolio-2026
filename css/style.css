@@ -389,77 +389,185 @@ footer a:hover {
             border-bottom: 2px solid white;
         }
 
-        .contact-section {
-            padding: 50px;
-            text-align: center;
-        }
+        /* --- Variables pour personnaliser facilement --- */
+:root {
+    --primary-color: #2c3e50;    /* Couleur sombre pro */
+    --accent-color: #25d366;     /* Vert WhatsApp */
+    --bg-light: #f8f9fa;
+    --white: #ffffff;
+    --transition: all 0.3s ease;
+}
 
-        .contact-container {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
+/* --- Styles de base --- */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-light);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
 
-        .contact-info, .contact-form {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            width: 300px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
+/* --- Section Main / Conteneur --- */
+.contact-section {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
 
-        .contact-info i {
-            color: #25D366;
-            margin-right: 10px;
-        }
+.contact-section h1 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
 
-        .form-group {
-            margin-bottom: 15px;
-            text-align: left;
-        }
+.contact-container {
+    display: flex;
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
 
-        input {
-            width: 100%;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
+/* --- Colonne Gauche : Vos Infos --- */
+.contact-info {
+    flex: 1;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
-        button {
-            width: 100%;
-            padding: 12px;
-            background-color: #1e90ff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+.contact-info h2 {
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
 
-        button:hover {
-            background-color: #0c7cd5;
-        }
+.contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
 
-        .whatsapp-btn {
-            display: block;
-            margin-top: 15px;
-            padding: 10px;
-            background-color: #25D366;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
+.contact-info i {
+    color: var(--accent-color);
+    font-size: 1.3rem;
+    width: 25px;
+}
 
-        footer {
-            background-color: #0a3d62;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 30px;
+.whatsapp-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    text-align: center;
+    transition: var(--transition);
+}
 
-        }
+.whatsapp-btn:hover {
+    background-color: #128c7e;
+    transform: translateY(-3px);
+}
 
-        /* Styles spécifiques pour la grille de divertissement */
+/* --- Colonne Droite : Formulaire --- */
+.contact-form {
+    flex: 1.2;
+    padding: 40px;
+}
+
+.contact-form h2 {
+    margin-bottom: 25px;
+    color: var(--primary-color);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-group input:focus {
+    border-color: var(--accent-color);
+    outline: none;
+    box-shadow: 0 0 5px rgba(37, 211, 102, 0.2);
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+button[type="submit"]:hover {
+    background-color: #34495e;
+}
+
+/* --- Section Footer --- */
+footer {
+    background-color: var(--white);
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid #eee;
+    margin-top: 60px;
+}
+
+footer p {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+footer a {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+footer a:hover {
+    color: var(--accent-color);
+}
+
+/* --- Adaptabilité Mobile (Responsive) --- */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+    
+    .contact-info, .contact-form {
+        padding: 30px;
+    }
+}
+
+/* Styles spécifiques pour la grille de divertissement */
 .section {
     padding: 4rem 2rem;
     max-width: 1200px;
